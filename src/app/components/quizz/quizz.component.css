@@ -1,0 +1,116 @@
+.quizz__container {
+  max-width: 40%;
+  margin: 20px auto;
+  color: #fff;
+}
+
+.quizz_logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.quizz_questions {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  font-size: 20px;
+  text-align: center;
+  background-color: #644ED2;
+  border: 2px solid #4224D9;
+  border-radius: 8px;
+}
+
+.quizz_button-back-question {
+  margin-bottom: 20px;
+  display: flex;
+}
+
+.btn-back-question {
+  padding: 10px 15px;
+  background-color: transparent;
+  border: 2px solid #4224D9;
+  border-radius: 8px;
+  color: #FFF;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.btn-back-question:hover {
+  background-color: #644ED2;
+}
+
+.quizz_options {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-option, .btn-reset-questions {
+  background-color: transparent;
+  border-radius: 8px;
+  border: 2px solid #18AB29;
+  /* width: calc(50% - 10px); */
+  width: 100%;
+  padding: 15px 10px;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.btn-option:hover, .btn-reset-questions:hover {
+  background-color: #5CBF2A;
+}
+
+.btn-option:active,
+.btn-reset-questions:active,
+.btn-back-question:active {
+  opacity: 0.9;
+  position: relative;
+  top: 2px;
+}
+
+.quizz_results {
+  background-color: #210239;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+}
+
+.quizz_results > p {
+  font-size: 18px;
+}
+
+.quizz_button-reset-questions {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 800px) {
+  .quizz__container {
+    max-width: 80%;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .quizz__container {
+    max-width: 30%;
+  }
+}

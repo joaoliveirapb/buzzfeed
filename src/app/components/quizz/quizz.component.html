@@ -1,0 +1,33 @@
+<div class="quizz__container">
+  <div class="quizz_logo">
+    <img src="assets/imgs/logo.png" alt="Logo do BuzzFeed">
+    <h2>{{ title }}</h2>
+  </div>
+
+  <div *ngIf="!finished" class="quizz_questions">
+    <h3>{{ questionSelected.question }}</h3>
+  </div>
+
+  <div *ngIf="showButtonBackQuestion" class="quizz_button-back-question">
+    <button (click)="backQuestion()" class="btn-back-question">⟵ Back question</button>
+  </div>
+
+  <div *ngIf="!finished" class="quizz_options">
+    <button
+      *ngFor="let option of questionSelected.options"
+      (click)="playerChoose(option.alias)"
+      class="btn-option"
+    >
+      {{ option.name }}
+    </button>
+  </div>
+
+  <div *ngIf="finished" class="quizz_results">
+    <h2>O seu resultado é:</h2>
+    <p>{{ answerSelected }}</p>
+  </div>
+
+  <div *ngIf="finished" class="quizz_button-reset-questions">
+    <button (click)="resetQuestions()" class="btn-reset-questions">Fazer o teste novamente</button>
+  </div>
+</div>
